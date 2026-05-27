@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'motion/react';
 export const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
@@ -51,7 +50,7 @@ export const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (Only Theme Toggle) */}
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => setTheme(isDark ? 'light' : 'dark')}
@@ -59,37 +58,11 @@ export const Navbar = () => {
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-lg font-medium"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
     </nav>
   );
 };

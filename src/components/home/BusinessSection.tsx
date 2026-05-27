@@ -41,9 +41,11 @@ export const BusinessSection = () => {
             viewport={{ once: true, amount: 0.01 }}
           >
             <h2 className="text-sm font-bold tracking-[0.3em] text-green-600 dark:text-green-500 mb-6 uppercase">Work Process</h2>
-            <h3 className="text-4xl md:text-5xl font-black mb-10 leading-tight tracking-tighter text-zinc-900 dark:text-white">
+            <h3 className="text-3xl md:text-4xl font-black mb-10 leading-[1.4] tracking-tighter text-zinc-900 dark:text-white">
               AIを使って、<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-500 dark:to-green-500">ブランディングコンサルティングの仕事を再設計する。</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-500 dark:to-green-500">
+                ブランディングコンサルティングの仕事を<br className="hidden md:block" />再設計する。
+              </span>
             </h3>
             <p className="text-zinc-800 dark:text-zinc-300 text-lg mb-12 leading-relaxed">
               BASEでは、AIを使いながら、企業の価値を見つけ、整理し、伝わる形にしていく実務に取り組みます。<br /><br />

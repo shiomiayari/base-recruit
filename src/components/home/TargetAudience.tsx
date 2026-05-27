@@ -30,12 +30,13 @@ export const TargetAudience = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <h2 className="text-sm font-bold tracking-[0.3em] text-blue-400 mb-6 uppercase">Who We Are Looking For</h2>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-black mb-10 leading-tight tracking-tighter">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-black mb-10 leading-tight tracking-tighter">
               この夏、何かに<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400">本気で取り組みたい学生へ。</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400 text-5xl md:text-6xl lg:text-7xl block my-2">本気で</span>
+              取り組みたい学生へ。
             </h3>
             
-            <div className="space-y-6 text-zinc-300 text-lg leading-relaxed">
+            <div className="space-y-6 text-zinc-300 text-base md:text-lg leading-relaxed">
               <p>
                 経験や専門スキルよりも、AIを使って実際のビジネスに向き合ってみたい、事業を動かす側に行きたい、大学生活の中で何かに没頭したいという意志を重視します。
               </p>

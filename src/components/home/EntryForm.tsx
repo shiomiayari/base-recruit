@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { motion } from 'motion/react';
 import { Send } from 'lucide-react';
 import { toast } from 'sonner';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 interface FormData {
   name: string;
@@ -15,14 +17,22 @@ interface FormData {
 export const EntryForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    toast.success("メッセージを送信しました。担当者よりご連絡いたします。");
-    reset();
+  const onSubmit = async (data: FormData) => {
+    try {
+      await addDoc(collection(db, 'entries'), {
+        ...data,
+        createdAt: serverTimestamp()
+      });
+      toast.success("メッセージを送信しました。担当者よりご連絡いたします。");
+      reset();
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      toast.error("エラーが発生しました。時間を置いて再度お試しください。");
+    }
   };
 
   return (
-    <section id="contact" className="relative z-[1] py-24 bg-white dark:bg-zinc-950 transition-colors">
+    <section id="entry" className="relative z-[1] py-24 bg-white dark:bg-zinc-950 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
@@ -36,13 +46,20 @@ export const EntryForm = () => {
             </p>
             <div className="space-y-4">
               <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl">
-                <p className="text-xs font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest mb-1">Office</p>
-                <p className="font-bold text-zinc-900 dark:text-white">〒104-0061 東京都中央区銀座X丁目X-X</p>
-                <p className="text-sm text-zinc-700 dark:text-zinc-400">Higashi-Ginza Station (1 min walk)</p>
+                <p className="text-xs font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest mb-1">Tokyo Office</p>
+                <p className="font-bold text-sm md:text-base text-zinc-900 dark:text-white">〒104-0061<br />東京都中央区銀座6-17-1 銀座6丁目-SQUARE 11階</p>
+              </div>
+              <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl">
+                <p className="text-xs font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest mb-1">Osaka Office</p>
+                <p className="font-bold text-sm md:text-base text-zinc-900 dark:text-white">〒541-0052<br />大阪市中央区安土町2-3-13 大阪国際ビルディング15F</p>
+              </div>
+              <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl">
+                <p className="text-xs font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest mb-1">Hokkaido Office</p>
+                <p className="font-bold text-sm md:text-base text-zinc-900 dark:text-white">〒060-0809<br />北海道札幌市北区北９条西４丁目 ガレリアビル３F</p>
               </div>
               <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl">
                 <p className="text-xs font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest mb-1">Email</p>
-                <p className="font-bold text-zinc-900 dark:text-white">hello@base.co.jp</p>
+                <p className="font-bold text-sm md:text-base text-zinc-900 dark:text-white">jba-saiyo@jbakk.co.jp</p>
               </div>
             </div>
           </div>

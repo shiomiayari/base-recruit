@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CONFIG = {
   photoCount: 12,
-  radius: 300, 
+  radius: 200, 
   rotationsOnScroll: 1.0,
   scrollDistance: 1200, // Reduced from 2000
   photos: Array.from({ length: 12 }, (_, i) =>
@@ -103,16 +103,16 @@ export const PhotoRing = () => {
           {/* Thoughts Overlay */}
           <div 
             ref={thoughtRef}
-            className="absolute z-20 text-center pointer-events-none px-10 py-8"
+            className="absolute z-20 text-center pointer-events-none px-6 py-4"
           >
             {/* Frosted backdrop */}
-            <div className="absolute inset-0 bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800" />
+            <div className="absolute inset-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border border-zinc-200 dark:border-zinc-800 rounded-xl" />
 
             <div className="relative">
-              <h3 className="text-3xl md:text-5xl font-black tracking-tighter text-zinc-900 dark:text-white mb-4 drop-shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
+              <h3 className="text-2xl md:text-3xl font-black tracking-tighter text-zinc-900 dark:text-white mb-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
                 BASEの<span className="text-blue-500 dark:text-blue-400">想い</span>とは。
               </h3>
-              <p className="text-zinc-600 dark:text-zinc-200 text-lg md:text-xl font-medium max-w-xl mx-auto leading-relaxed">
+              <p className="text-zinc-600 dark:text-zinc-200 text-sm md:text-base font-medium max-w-xl mx-auto leading-relaxed">
                 AIとともに、企業の情熱を<br />
                 次世代へ語り継ぐ物語へと昇華させる。
               </p>
@@ -122,7 +122,7 @@ export const PhotoRing = () => {
           <div ref={tiltRef} className="preserve-3d will-change-transform">
             <div 
               ref={ringRef} 
-              className="relative w-[160px] h-[210px] preserve-3d will-change-transform"
+              className="relative w-[120px] h-[160px] preserve-3d will-change-transform"
             >
               {CONFIG.photos.map((src, i) => (
                 <div

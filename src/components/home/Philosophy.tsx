@@ -27,13 +27,13 @@ export const Philosophy = () => {
       <div className="absolute inset-0 pointer-events-none flex flex-col justify-center gap-8 select-none overflow-hidden">
         <motion.div
           style={{ x: textX1 }}
-          className="text-[15vw] font-black whitespace-nowrap leading-none tracking-tighter text-zinc-100 dark:text-zinc-800"
+          className="text-[25vw] md:text-[20vw] font-black whitespace-nowrap leading-none tracking-tighter text-zinc-100 dark:text-zinc-800"
         >
           BEYOND THE LIMITS • BEYOND THE LIMITS • BEYOND THE LIMITS
         </motion.div>
         <motion.div
           style={{ x: textX2 }}
-          className="text-[15vw] font-black whitespace-nowrap leading-none tracking-tighter text-transparent"
+          className="text-[25vw] md:text-[20vw] font-black whitespace-nowrap leading-none tracking-tighter text-transparent"
         >
           <span style={{ WebkitTextStroke: '1px #d4d4d8' }} className="dark:[style:--stroke:#27272a] italic">
             AI NATIVE DESIGN • AI NATIVE DESIGN • AI NATIVE DESIGN

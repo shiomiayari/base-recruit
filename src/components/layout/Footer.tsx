@@ -8,14 +8,13 @@ export const Footer = () => {
   return (
     <footer className="bg-zinc-50 dark:bg-zinc-900 pt-24 pb-12 transition-colors border-t border-zinc-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <span className="font-bold text-2xl tracking-tighter">株式会社BASE</span>
             </div>
             <p className="max-w-md text-zinc-700 dark:text-zinc-400 mb-8 leading-relaxed">
-              AI技術とデザインの融合により、企業の記憶を形にするエージェンシー。
-              東銀座から、100年後の未来へ届くクリエイティブを発信しています。
+              日本ビジネスアート株式会社（JBA）が作る新しいブランディングコンサル会社。JBAでは、企業の記憶をカタチにする仕事をしています。東銀座から世界へ。人に届くクリエイティブを発信していきます。
             </p>
             <div className="flex space-x-4">
               {[Share2].map((Icon, i) => (
@@ -31,22 +30,12 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Services</h4>
-            <ul className="space-y-4 text-zinc-700 dark:text-zinc-400">
-              <li><a href="#" className="hover:text-blue-500 transition-colors flex items-center group">Corporate History <ArrowUpRight size={14} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" /></a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors flex items-center group">Anniversary Book <ArrowUpRight size={14} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" /></a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors flex items-center group">Brand Archive <ArrowUpRight size={14} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" /></a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors flex items-center group">Digital Storytelling <ArrowUpRight size={14} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" /></a></li>
-            </ul>
-          </div>
-
-          <div>
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Company</h4>
             <ul className="space-y-4 text-zinc-700 dark:text-zinc-400">
-              <li><a href="#" className="hover:text-blue-500 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">News</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">Contact</a></li>
+              <li><a href="https://www.jbakk.co.jp/about/purpose/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">About Us</a></li>
+              <li><a href="https://www.jbakk.co.jp/business/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">Business</a></li>
+              <li><a href="https://www.jbakk.co.jp/recruit/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">Career</a></li>
+              <li><a href="https://www.jbakk.co.jp/contact/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
