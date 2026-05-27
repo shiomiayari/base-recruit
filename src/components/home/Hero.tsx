@@ -142,13 +142,13 @@ export const Hero = () => {
           <h1 className="font-black tracking-tighter leading-tight overflow-hidden">
             <span
               ref={line1Ref}
-              className="block will-change-transform text-2xl md:text-5xl mb-2"
+              className="block will-change-transform text-2xl md:text-6xl lg:text-7xl mb-2 md:mb-4"
             >
               AIで、企業の価値を見つけ、
             </span>
             <span
               ref={line2Ref}
-              className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-red-500 will-change-transform mt-2 pb-2 text-4xl md:text-7xl font-black"
+              className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-red-500 will-change-transform mt-2 pb-2 text-4xl md:text-8xl lg:text-9xl font-black"
             >
               伝え、広げる。
             </span>
