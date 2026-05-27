@@ -6,7 +6,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-zinc-50 dark:bg-zinc-900 pt-24 pb-12 transition-colors border-t border-zinc-200 dark:border-zinc-800">
+    <footer className="relative z-10 bg-zinc-50 dark:bg-zinc-900 pt-24 pb-12 transition-colors border-t border-zinc-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">

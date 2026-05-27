@@ -103,23 +103,23 @@ export const PhotoRing = () => {
           {/* Thoughts Overlay */}
           <div 
             ref={thoughtRef}
-            className="absolute z-20 text-center pointer-events-none px-6 py-4"
+            className="absolute z-20 text-center pointer-events-none px-4 py-3 md:px-6 md:py-4"
           >
             {/* Frosted backdrop */}
-            <div className="absolute inset-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border border-zinc-200 dark:border-zinc-800 rounded-xl" />
+            <div className="absolute inset-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border border-zinc-200 dark:border-zinc-800 rounded-xl md:rounded-2xl" />
 
             <div className="relative">
-              <h3 className="text-2xl md:text-3xl font-black tracking-tighter text-zinc-900 dark:text-white mb-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
+              <h3 className="text-xl md:text-3xl font-black tracking-tighter text-zinc-900 dark:text-white mb-1 md:mb-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
                 BASEの<span className="text-blue-500 dark:text-blue-400">想い</span>とは。
               </h3>
-              <p className="text-zinc-600 dark:text-zinc-200 text-sm md:text-base font-medium max-w-xl mx-auto leading-relaxed">
+              <p className="text-zinc-600 dark:text-zinc-200 text-xs md:text-base font-medium max-w-xl mx-auto leading-relaxed">
                 AIとともに、企業の情熱を<br />
                 次世代へ語り継ぐ物語へと昇華させる。
               </p>
             </div>
           </div>
 
-          <div ref={tiltRef} className="preserve-3d will-change-transform">
+          <div ref={tiltRef} className="preserve-3d will-change-transform scale-[0.55] sm:scale-[0.7] md:scale-100">
             <div 
               ref={ringRef} 
               className="relative w-[120px] h-[160px] preserve-3d will-change-transform"

@@ -107,7 +107,7 @@ export const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen flex items-center justify-center pt-20"
+      className="relative min-h-[120vh] flex flex-col justify-start pt-[25vh] md:pt-[30vh]"
     >
       {/* Background: position:fixed = viewport-locked, zero gaps guaranteed */}
       <div
@@ -139,34 +139,37 @@ export const Hero = () => {
 
 
           {/* Headline — each line moves independently */}
-          <h1 className="text-3xl md:text-6xl font-black tracking-tighter leading-tight mb-8 overflow-hidden">
+          <h1 className="font-black tracking-tighter leading-tight overflow-hidden">
             <span
               ref={line1Ref}
-              className="block will-change-transform"
+              className="block will-change-transform text-2xl md:text-5xl mb-2"
             >
               AIで、企業の価値を見つけ、
             </span>
             <span
               ref={line2Ref}
-              className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-red-500 will-change-transform mt-2 pb-2"
+              className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-red-500 will-change-transform mt-2 pb-2 text-4xl md:text-7xl font-black"
             >
               伝え、広げる。
             </span>
-            <span className="block text-2xl md:text-3xl mt-12 font-bold text-zinc-900 dark:text-white">
-              新会社「BASE」の立ち上げメンバー募集。
-            </span>
           </h1>
 
-          {/* Subtitle */}
-          <p
-            ref={subtitleRef}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 leading-relaxed will-change-transform"
-          >
-            日本ビジネスアートが、AI組織「BASE」を立ち上げます。<br />
-            企業のブランディング、広報、マーケティングをAI前提で再構築し、地方の一流企業の価値を全国へ届けていく新組織です。<br /><br />
-            東京・大阪・札幌で同時に立ち上がるBASEに、<br />
-            大学生の立ち上げメンバーを募集します。
-          </p>
+          <div className="mt-[30vh] md:mt-[40vh]">
+            <p className="block text-lg sm:text-xl md:text-3xl mb-8 font-bold text-zinc-900 dark:text-white whitespace-nowrap overflow-hidden text-ellipsis">
+              新会社「BASE」の立ち上げメンバー募集。
+            </p>
+
+            {/* Subtitle */}
+            <p
+              ref={subtitleRef}
+              className="max-w-2xl mx-auto text-xs sm:text-sm md:text-base text-zinc-600 dark:text-zinc-400 mb-10 leading-relaxed will-change-transform px-2"
+            >
+              日本ビジネスアートが、AI組織「BASE」を立ち上げます。<br />
+              企業のブランディング、広報、マーケティングをAI前提で再構築し、地方の一流企業の価値を全国へ届けていく新組織です。<br /><br />
+              東京・大阪・札幌で同時に立ち上がるBASEに、<br />
+              大学生の立ち上げメンバーを募集します。
+            </p>
+          </div>
 
           {/* Buttons */}
           <div
